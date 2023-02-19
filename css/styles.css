@@ -283,7 +283,7 @@ main .hero button:focus {
   color: var(--cloud);
 }
 
-/* ============================================= */
+/* ======================== MAIN ABOUT===================== */
 
 main .about {
   display: flex;
@@ -328,21 +328,7 @@ main .about .strategy::before {
   margin-bottom: 8px;
 }
 
-main .about .punctuality::before {
-  display: block;
-  content: "";
-  background-color: var(--cloud);
-  background-image: url(../images/advantages-clock.svg);
-  height: 112px;
-  width: 264px;
-  padding: 24px 100px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-origin: content-box;
-  margin-bottom: 8px;
-}
-
-main .about .diligence::before {
+mainain .about .diligence::before {
   display: block;
   content: "";
   background-color: var(--cloud);
@@ -369,6 +355,21 @@ main .about .tech::before {
   background-origin: content-box;
   margin-bottom: 8px;
 }
+
+main .about .punctuality::before {
+  display: block;
+  content: "";
+  background-color: var(--cloud);
+  background-image: url(../images/advantages-clock.svg);
+  height: 112px;
+  width: 264px;
+  padding: 24px 100px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-origin: content-box;
+  margin-bottom: 8px;
+}
+
 
 /* ============================================= */
 main .what-we-are-doing {

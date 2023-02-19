@@ -16,7 +16,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/styles-new.css" />
   </head>
 
   <body>
@@ -62,7 +62,7 @@
           </ul>
         </nav>
 
-        <address>
+        <address class="main-address">
           <ul class="contact-us list">
             <li>
               <div class="head-dec">
@@ -91,6 +91,164 @@
             </li>
           </ul>
         </address>
+
+        <button type="button" class="mobile-menu-button" data-menu-open>
+          <svg class="mobile-menu-icon" width="32" height="22">
+            <use href="./images/symbol-defs.svg#icon-mobile-menu"></use>
+          </svg>
+        </button>
+
+        <div class="mobile-menu is-hidden" data-menu>
+          <!-- <div class="container-mob"> -->
+          <div>
+            <button class="close-menu" data-menu-close type="button">
+              <svg class="close" width="8" height="8">
+                <use href="./images/symbol-defs.svg#icon-modal-close"></use>
+              </svg>
+            </button>
+
+            <ul class="list mobile-menu-pages">
+              <li>
+                <a
+                  class="link"
+                  href="./index.html"
+                  rel="noopener nofollow noreferrer"
+                >
+                  Studio
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="link"
+                  href="./portfolio.html"
+                  rel="noopener nofollow noreferrer"
+                >
+                  Portfolio
+                </a>
+              </li>
+
+              <li>
+                <a
+                  class="link active"
+                  href=""
+                  rel="noopener nofollow noreferrer"
+                >
+                  Contacts
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <address class="mobile-address">
+              <ul class="mobile-contact-us list">
+                <li>
+                  <div class="head-dec">
+                    <a class="link-1 phone" href="tel:+110001111111">
+                      <!-- <svg class="header-contact-icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-phone"></use>
+                      </svg> -->
+                      +11 (000) 111-11-11
+                    </a>
+                  </div>
+                </li>
+
+                <li>
+                  <div class="head-dec">
+                    <a
+                      class="link-1 email"
+                      href="mailto:info@devstudio.com"
+                      rel="noopener nofollow noreferrer"
+                    >
+                      <!-- <svg class="header-contact-icon" width="20" height="20">
+                        <use href="./images/symbol-defs.svg#icon-envelope"></use>
+                      </svg> -->
+                      info@devstudio.com
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </address>
+
+            <div class="mobile-social-media">
+              <ul class="mobile-social-media-contacts list">
+                <li class="mobile-social-media-contact-item">
+                  <a
+                    class="mobile-social-media-contact-link link"
+                    href=""
+                    rel="noopener nofollow noreferrer"
+                  >
+                    <svg
+                      class="mobile-social-media-contact-icon"
+                      width="24"
+                      height="24"
+                    >
+                      <use
+                        href="./images/symbol-defs.svg#icon-cont-instagram"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="mobile-social-media-contact-item">
+                  <a
+                    class="mobile-social-media-contact-link link"
+                    href=""
+                    rel="noopener nofollow noreferrer"
+                  >
+                    <svg
+                      class="mobile-social-media-contact-icon"
+                      width="24"
+                      height="24"
+                    >
+                      <use
+                        href="./images/symbol-defs.svg#icon-cont-twitter"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="mobile-social-media-contact-item">
+                  <a
+                    class="mobile-social-media-contact-link link"
+                    href=""
+                    rel="noopener nofollow noreferrer"
+                  >
+                    <svg
+                      class="mobile-social-media-contact-icon"
+                      width="24"
+                      height="24"
+                    >
+                      <use
+                        href="./images/symbol-defs.svg#icon-cont-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li class="mobile-social-media-contact-item">
+                  <a
+                    class="mobile-social-media-contact-link link"
+                    href=""
+                    rel="noopener nofollow noreferrer"
+                  >
+                    <svg
+                      class="mobile-social-media-contact-icon"
+                      width="24"
+                      height="24"
+                    >
+                      <use
+                        href="./images/symbol-defs.svg#icon-cont-linkedin"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- </div>     -->
+        </div>
       </div>
     </header>
 
@@ -146,21 +304,42 @@
         </div>
       </section>
 
-      <section class="what-we-are-doing">
+      <section class="what-we-are-doing is-hidden">
         <div class="container">
           <h2>What Are We Doing</h2>
 
           <ul class="list">
             <li>
-              <img src="./images/what-we-are-doing-img1.jpg" alt="computer" />
+              <img
+                src="./images/what-we-are-doing-img1.jpg"
+                alt="computer"
+                srcset="
+                  ./images/what-we-are-doing-img1.jpg    1x,
+                  ./images/what-we-are-doing-img1-2x.jpg 2x
+                "
+              />
             </li>
 
             <li>
-              <img src="./images/what-we-are-doing-img2.jpg" alt="computer" />
+              <img
+                src="./images/what-we-are-doing-img1.jpg"
+                alt="computer"
+                srcset="
+                  ./images/what-we-are-doing-img2.jpg    1x,
+                  ./images/what-we-are-doing-img2-2x.jpg 2x
+                "
+              />
             </li>
 
             <li>
-              <img src="./images/what-we-are-doing-img3.jpg" alt="computer" />
+              <img
+                src="./images/what-we-are-doing-img3.jpg"
+                alt="computer"
+                srcset="
+                  ./images/what-we-are-doing-img3.jpg    1x,
+                  ./images/what-we-are-doing-img3-2x.jpg 2x
+                "
+              />
             </li>
           </ul>
         </div>
@@ -176,6 +355,10 @@
                 <img
                   src="./images/our-team-member1.jpg"
                   alt="our team member1"
+                  srcset="
+                    ./images/our-team-member1.jpg    1x,
+                    ./images/our-team-member1-2x.jpg 2x
+                  "
                 />
               </div>
               <div class="card-descr">
@@ -247,6 +430,10 @@
                 <img
                   src="./images/our-team-member2.jpg"
                   alt="our team member 2"
+                  srcset="
+                    ./images/our-team-member2.jpg    1x,
+                    ./images/our-team-member2-2x.jpg 2x
+                  "
                 />
               </div>
               <div class="card-descr">
@@ -314,6 +501,10 @@
                 <img
                   src="./images/our-team-member3.jpg"
                   alt="our team member3"
+                  srcset="
+                    ./images/our-team-member3.jpg    1x,
+                    ./images/our-team-member3-2x.jpg 2x
+                  "
                 />
               </div>
               <div class="card-descr">
@@ -385,6 +576,10 @@
                 <img
                   src="./images/our-team-member4.jpg"
                   alt="our team member 4"
+                  srcset="
+                    ./images/our-team-member4.jpg    1x,
+                    ./images/our-team-member4-2x.jpg 2x
+                  "
                 />
               </div>
               <div class="card-descr">
@@ -539,87 +734,105 @@
     <footer>
       <div class="container">
         <div class="foot">
-          <div class="box">
-            <a
-              class="link-2 footer-logo"
-              href="./index.html"
-              rel="noopener nofollow noreferrer"
-            >
-              <span>Web</span>Studio
-            </a>
+          <div class="footer-info">
+            <div class="box">
+              <a
+                class="link-2 footer-logo"
+                href="./index.html"
+                rel="noopener nofollow noreferrer"
+              >
+                <span>Web</span>Studio
+              </a>
 
-            <p>
-              Increase the flow of customers and sales for your business with
-              digital marketing & growth solutions.
-            </p>
-          </div>
+              <p>
+                Increase the flow of customers and sales for your business with
+                digital marketing & growth solutions.
+              </p>
+            </div>
 
-          <div class="social-media">
-            <p>Social media</p>
+            <div class="social-media">
+              <p>Social media</p>
 
-            <ul class="social-media-contacts list">
-              <li class="social-media-contact-item">
-                <a
-                  class="social-media-contact-link link"
-                  href=""
-                  rel="noopener nofollow noreferrer"
-                >
-                  <svg class="social-media-contact-icon" width="24" height="24">
-                    <use
-                      href="./images/symbol-defs.svg#icon-cont-instagram"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
+              <ul class="social-media-contacts list">
+                <li class="social-media-contact-item">
+                  <a
+                    class="social-media-contact-link link"
+                    href=""
+                    rel="noopener nofollow noreferrer"
+                  >
+                    <svg
+                      class="social-media-contact-icon"
+                      width="24"
+                      height="24"
+                    >
+                      <use
+                        href="./images/symbol-defs.svg#icon-cont-instagram"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
 
-              <li class="social-media-contact-item">
-                <a
-                  class="social-media-contact-link link"
-                  href=""
-                  rel="noopener nofollow noreferrer"
-                >
-                  <svg class="social-media-contact-icon" width="24" height="24">
-                    <use
-                      href="./images/symbol-defs.svg#icon-cont-twitter"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
+                <li class="social-media-contact-item">
+                  <a
+                    class="social-media-contact-link link"
+                    href=""
+                    rel="noopener nofollow noreferrer"
+                  >
+                    <svg
+                      class="social-media-contact-icon"
+                      width="24"
+                      height="24"
+                    >
+                      <use
+                        href="./images/symbol-defs.svg#icon-cont-twitter"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
 
-              <li class="social-media-contact-item">
-                <a
-                  class="social-media-contact-link link"
-                  href=""
-                  rel="noopener nofollow noreferrer"
-                >
-                  <svg class="social-media-contact-icon" width="24" height="24">
-                    <use
-                      href="./images/symbol-defs.svg#icon-cont-facebook"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
+                <li class="social-media-contact-item">
+                  <a
+                    class="social-media-contact-link link"
+                    href=""
+                    rel="noopener nofollow noreferrer"
+                  >
+                    <svg
+                      class="social-media-contact-icon"
+                      width="24"
+                      height="24"
+                    >
+                      <use
+                        href="./images/symbol-defs.svg#icon-cont-facebook"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
 
-              <li class="social-media-contact-item">
-                <a
-                  class="social-media-contact-link link"
-                  href=""
-                  rel="noopener nofollow noreferrer"
-                >
-                  <svg class="social-media-contact-icon" width="24" height="24">
-                    <use
-                      href="./images/symbol-defs.svg#icon-cont-linkedin"
-                    ></use>
-                  </svg>
-                </a>
-              </li>
-            </ul>
+                <li class="social-media-contact-item">
+                  <a
+                    class="social-media-contact-link link"
+                    href=""
+                    rel="noopener nofollow noreferrer"
+                  >
+                    <svg
+                      class="social-media-contact-icon"
+                      width="24"
+                      height="24"
+                    >
+                      <use
+                        href="./images/symbol-defs.svg#icon-cont-linkedin"
+                      ></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
 
           <div class="footer-subscribe">
             <p>Subscribe</p>
 
-            <form autocomplete="off">
+            <form autocomplete="off" class="footer-subscribe-form">
               <input
                 type="email"
                 class="user-email"
@@ -734,5 +947,6 @@
     </div>
 
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
