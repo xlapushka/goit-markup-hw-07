@@ -160,6 +160,9 @@ img {
   pointer-events: none;
 }
 
+.no-scroll {
+  overflow: hidden;
+}
 
 /* ====================HEADER+=========================== */
 
@@ -193,8 +196,6 @@ header .menu,
 header nav {
   display: flex;
   align-items: center;
-
-  line-height: 1.5;
 }
 
 .mobile-menu-button {
@@ -410,10 +411,10 @@ header nav {
 }
 
 /* ================================= WHAT WE ARE DOING ======================= */
-  
+
 main .what-we-are-doing {
-    display: none;
-  }
+  display: none;
+}
 
 /* ================================= OUR TEAM ======================= */
 
@@ -747,7 +748,35 @@ footer .box p {
     padding-right: 16px;
   }
 
-  header .menu,
+  header {
+    display: flex;
+    align-items: flex-start;
+    height: 70px;
+  }
+
+  header nav .list,
+  header .main-address {
+    display: block;
+  }
+
+  .mobile-menu-button {
+    display: none;
+  }
+
+  header .menu {
+    justify-content: flex-start;
+    align-items: center;
+    height: 70px;
+  }
+
+  header .menu .list {
+    display: flex;
+  }
+
+  header nav .link.logo {
+    margin-right: 120px;
+  }
+
   header nav {
     display: flex;
     align-items: center;
@@ -755,8 +784,32 @@ footer .box p {
     line-height: 1.5;
   }
 
+  header .menu .contact-us {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    gap: 4px;
+  }
+
   header .menu > address {
     margin-left: auto;
+  }
+
+  header .contact-us .link-1 {
+    display: block;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+
+  .email,
+  .phone {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: calc(16 / 12);
+    letter-spacing: 0.04em;
+
+    color: var(--slate);
   }
 
   header .active {
@@ -770,6 +823,7 @@ footer .box p {
 
     content: "";
     height: 4px;
+    border-radius: 2px;
     width: 100%;
 
     background-color: var(--ocean);
@@ -780,23 +834,14 @@ footer .box p {
     margin-right: 76px;
   }
 
-  header nav .link,
-  header .contact-us .link-1 {
+  header nav .link {
     display: block;
     padding-top: 24px;
-    padding-bottom: 24px;
+    padding-bottom: 22px;
   }
 
-  header nav .list li:not(:last-child),
-  header .contact-us li:not(:last-child) {
+  header nav .list li:not(:last-child) {
     margin-right: 40px;
-  }
-
-  header .contact-us {
-    margin-left: auto;
-
-    font-weight: 400;
-    font-style: normal;
   }
 
   .hero {
@@ -932,6 +977,34 @@ footer .box p {
   .list {
     display: flex;
     justify-content: space-between;
+  }
+
+  header,
+  header .menu {
+    height: 76px;
+  }
+
+  header nav .link {
+    padding-bottom: 24px;
+  }
+
+  header .menu .contact-us {
+    flex-direction: row-reverse;
+    margin-left: auto;
+    gap: 40px;
+  }
+
+  header .contact-us .link-1 {
+    padding-top: 24px;
+    padding-bottom: 28px;
+  }
+
+  .email,
+  .phone {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: calc(24 / 16);
+    letter-spacing: 0.02em;
   }
 
   .hero {
