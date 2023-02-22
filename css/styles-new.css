@@ -228,6 +228,13 @@ header nav {
   padding-left: 40px;
 
   background-color: var(--white);
+
+  transform: translateY(0);
+  transition: transform 250ms ease-in-out;
+}
+
+.mobile-menu.is-open {
+  transform: translateY(-100%);
 }
 
 .close-menu {
@@ -565,7 +572,8 @@ footer {
 footer .box {
   margin: 0 auto;
   text-align: center;
-  max-width: 264px;
+  /* max-width: 264px; */
+  width: 264px;
 }
 
 footer .footer-logo {
@@ -587,8 +595,9 @@ footer .box p {
 }
 
 .social-media {
+  margin: 0 auto;
   padding-top: 72px;
-  min-width: 208px;
+  width: 208px;
   text-align: center;
 }
 
@@ -702,6 +711,197 @@ footer .box p {
   border-color: var(--ocean);
 }
 
+/* ============================== modal =========================== */
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--navy-blue-modal);
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  min-width: 88%;
+  min-height: auto;
+  padding: 24px 16px;
+  padding-top: 72px;
+  margin-top: 16px;
+
+  background-color: var(--modal-background);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transform: translate(-50%, -50%) scale(1);
+
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 24px;
+  height: 24px;
+
+  background-color: var(--cornflower);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-modal:hover {
+  cursor: pointer;
+  background-color: var(--ocean);
+  fill: var(--white);
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.9);
+}
+
+.modal-form {
+  margin-top: 16px;
+}
+
+.modal-form label {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+
+  color: var(--light-slate);
+}
+
+.modal .modal-input {
+  margin-top: 4px;
+  margin-bottom: 8px;
+
+  width: 100%;
+  height: 40px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  padding-left: 34px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus {
+  border: 1px solid var(--iris);
+}
+
+.div-for-icon {
+  position: relative;
+}
+
+.modal-icon {
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+  fill: var(--navy-blue);
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--iris);
+}
+
+.modal-input.comment {
+  height: 120px;
+  padding: 8px 16px;
+  resize: none;
+}
+
+#modal-form-comment::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-form-checkbox {
+  display: flex;
+}
+
+.modal-checkbox-link {
+  text-decoration-line: underline;
+  color: var(--iris);
+}
+
+.modal-checkbox-link:is(:hover, :focus) {
+  color: var(--ocean);
+}
+
+.modal-form-checkbox span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+
+  border: 1.25px solid var(--navy-blue);
+  border-radius: 2px;
+  background-color: transparent;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox:checked + .modal-form-checkbox span {
+  fill: var(--ocean);
+  border: 1.25px solid var(--ocean);
+  background-color: var(--ocean);
+}
+
+.modal-form button {
+  display: block;
+  margin: 24px auto;
+  margin-bottom: 0;
+
+  width: 169px;
+  height: 56px;
+  padding: 16px 32px;
+  background-color: var(--iris);
+  border: 1px solid var(--iris);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+
+  color: var(--white);
+  letter-spacing: 0.04em;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-form button:is(:hover, :focus) {
+  background-color: var(--ocean);
+  border: 1px solid var(--ocean);
+  cursor: pointer;
+}
+
 /* ============================== MEDIA ============================ */
 
 @media screen and (min-width: 404px) {
@@ -711,6 +911,12 @@ footer .box p {
 
   .mobile-social-media-contacts {
     gap: 56px;
+  }
+
+  .modal {
+    min-width: 392px;
+    min-height: 586px;
+    margin-top: 96px;
   }
 }
 
@@ -851,6 +1057,12 @@ footer .box p {
     background-size: 1440px 600px;
   }
 
+  .modal {
+    min-width: 408px;
+    min-height: 576px;
+    margin-top: 80px;
+  }
+
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
@@ -925,11 +1137,13 @@ footer .box p {
   }
 
   .foot {
+    margin: 0 auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 
     row-gap: 72px;
+    width: 552px;
   }
 
   .footer-info {
@@ -945,7 +1159,6 @@ footer .box p {
 
   .social-media {
     padding-top: 0;
-    width: 264px;
   }
 
   .social-media-contacts {
@@ -960,7 +1173,6 @@ footer .box p {
 
   .user-email-submit-button {
     margin-top: 0;
-    margin-right: 100px;
   }
 
   .user-email {
@@ -1107,6 +1319,11 @@ footer .box p {
     padding-bottom: 120px;
   }
 
+  main .what-we-are-doing .list {
+    margin-left: -16px;
+    margin-right: -16px;
+  }
+
   main .what-we-are-doing h2,
   main .our-team h2,
   main .customers h2 {
@@ -1153,12 +1370,19 @@ footer .box p {
   }
 
   .foot {
+    margin-left: -12px;
+    margin-right: -12px;
+    justify-content: flex-start;
     flex-wrap: nowrap;
     gap: 80px;
   }
 
   .footer-info {
     column-gap: 120px;
+  }
+
+  .social-media-contacts.list {
+    justify-content: flex-start;
   }
 
   .footer-subscribe {
